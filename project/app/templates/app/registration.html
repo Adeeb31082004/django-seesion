@@ -1,0 +1,26 @@
+{% extends "app/base.html"%} 
+  {% block content %} 
+  <form action="{% url 'Savedata'%}" method="post">
+   
+   {% csrf_token %}
+   <label for="">first name</label> <br>
+   <input type="text" name="fname" placeholder="firstname" required=""><br>
+   
+   <label for="">last name</label> <br>
+   <input type="text" name="lname" placeholder="lastname" required=""><br>
+   
+   <label for=""> email address </label> <br>
+   <input type="email" name="email" placeholder="email" required=""><br>
+   
+   <label for="">contact</label> <br>
+   <input type="number" name="contact" placeholder="contact" required=""><br>
+
+   <label for="">password</label> <br>
+   <input type="password" name="password" placeholder="password" required=""><br>
+   
+   <label for="">confirm password</label> <br>
+   <input type="password" name="cpassword" placeholder="password" required=""><br>
+
+   <input type="submit" value="signup">
+  </form>
+     {% endblock %}

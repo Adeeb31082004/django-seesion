@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        hr{
+            margin: 0;
+        }
+.nav{
+
+
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    width: 100%;
+    height: 70px;
+    
+}
+.nav-block {
+    display: flex;
+}
+
+.nav-block div a{
+    margin: 0 10px ;
+    text-decoration: none;
+    font-size: 25px;
+font-style: initial ;
+
+    
+}
+.box{
+    width: 100%;
+    height: 100vh;
+    background-color: chartreuse;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav">
+            <div class="nav-block">
+
+                <div > <a href="{% url 'home'%}">home</a></div>
+                <div class="b"> <a href="{% url 'about'%}">about</a></div>
+            </div>
+            <div class="nav-block">
+                <div> <a href="{% url 'registration'%}">registration</a></div>
+                <div> <a href="{% url 'login'%}">login</a></div>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    {% block content %}
+     {%endblock%}
+</body>
+</html>

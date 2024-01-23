@@ -1,0 +1,22 @@
+{% extends "app/base.html"%} 
+{% block content %} 
+
+<h1> sign</h1>
+           <center>
+
+
+              <div>
+                  <form action="{% url 'LoginPage' %}" method="post">
+                      {% csrf_token%} 
+                      <input type="email" name="email" placeholder="email" required=""><br>
+                      <input type="password" name="password" placeholder="password" required=""> <br>
+                      <input type="submit" value="Login">
+                  
+                  
+                  
+                  </form>
+                  <p> dont hqve an account <a href="{% url 'registration' %}" style="color: aqua;"> register now</a>/p>
+              </div>
+           </center>
+   {%endblock%}
+  
